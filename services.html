@@ -56,21 +56,31 @@
 
 
   <!-- SectionA -->
-    <section>
+    <section >
 
-      <img src="./img/IMG_8374.JPG" alt="Background Image" class="background-video" />
+      <img src="./img/JOSH0036.jpg" alt="Background Image" class="background-video" />
 
       <div class="section-inner-center">
         <h3>New  era of photography</h3>
         <p>Scroll to dive in</p>
+
+        <br>
+        <br>
+        <a   id="start-button">
+          <button class="button-27" role="button">Start</button>
+         
       </div>
+
+    
+        
+      </a>
     </section>
    
 
 
 
     <!-- section B -->
-    <div class="container-services">
+    <div class="container-services" id="card-section">
         <div class="service-wrapper">
             <div class="services">
               
@@ -165,135 +175,6 @@
 
             
 
-<!--            
-            <div class="ag-format-container">
-              <div class="ag-courses_box">
-                <div class="ag-courses_item">
-                  <a href="#" class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      UI/Web&amp;Graph design for teenagers 11-17&#160;years old
-                    </div>
-            
-                    <div class="ag-courses-item_date-box">
-                      Start:
-                      <span class="ag-courses-item_date">
-                        04.11.2022
-                      </span>
-                    </div>
-                  </a>
-                </div>
-            
-                <div class="ag-courses_item">
-                  <a href="#" class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      UX/UI Web-Design&#160;+ Mobile Design
-                    </div>
-            
-                    <div class="ag-courses-item_date-box">
-                      Start:
-                      <span class="ag-courses-item_date">
-                        04.11.2022
-                      </span>
-                    </div>
-                  </a>
-                </div>
-            
-                <div class="ag-courses_item">
-                  <a href="#" class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      Annual package "Product+UX/UI+Graph designer&#160;2022"
-                    </div>
-            
-                    <div class="ag-courses-item_date-box">
-                      Start:
-                      <span class="ag-courses-item_date">
-                        04.11.2022
-                      </span>
-                    </div>
-                  </a>
-                </div>
-            
-                <div class="ag-courses_item">
-                  <a href="#" class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      Graphic Design
-                    </div>
-            
-                    <div class="ag-courses-item_date-box">
-                      Start:
-                      <span class="ag-courses-item_date">
-                        04.11.2022
-                      </span>
-                    </div>
-                  </a>
-                </div>
-            
-                <div class="ag-courses_item">
-                  <a href="#" class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      Motion Design
-                    </div>
-            
-                    <div class="ag-courses-item_date-box">
-                      Start:
-                      <span class="ag-courses-item_date">
-                        30.11.2022
-                      </span>
-                    </div>
-                  </a>
-                </div>
-            
-                <div class="ag-courses_item">
-                  <a href="#" class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      Front-end development&#160;+ jQuery&#160;+ CMS
-                    </div>
-                  </a>
-                </div>
-            
-                <div class="ag-courses_item">
-                  <a href="#" class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg">
-                    </div>
-                    <div class="ag-courses-item_title">
-                      Digital Marketing
-                    </div>
-                  </a>
-                </div>
-            
-                <div class="ag-courses_item">
-                  <a href="#" class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      Interior Design
-                    </div>
-            
-                    <div class="ag-courses-item_date-box">
-                      Start:
-                      <span class="ag-courses-item_date">
-                        31.10.2022
-                      </span>
-                    </div>
-                  </a>
-                </div>
-            
-              </div>
-            </div> -->
-
-
 
            
          
@@ -313,7 +194,7 @@
 
     <footer>
       <ul>
-        <li>SpaceX &copy; 2022</li>
+        <li>Joshophotography &copy; 2022</li>
         <li><a href="#">Twitter</a></li>
         <li><a href="#">YouTube</a></li>
         <li><a href="#">Instagram</a></li>
@@ -323,5 +204,13 @@
         <li><a href="#">Suppliers</a></li>
       </ul>
     </footer>
+
+
+    <script>
+      document.getElementById("start-button").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        document.getElementById("card-section").scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>

@@ -41,12 +41,17 @@
       <img src="../img/IMG_8369.JPG" alt="Background Image" class="background-video" />
 
       <div class="section-inner">
-        <h4>Scroll Down</h4>
+        <h4>The</h4>
         <h2>Joshua Photography</h2>
-        <a href="../contactus.html" class="btn">
+
+
+        <a href="../contactus.html"  id="start-button">
+          <button class="button-27" role="button">Start</button>
           <div class="hover"></div>
-          <span>Start Here</span>
+          
         </a>
+
+
       </div>
     </section>
 
@@ -57,15 +62,15 @@
     <!-- Section B -->
   
 
-    <div class="card-container">
+    <div class="card-container" id="card-section">
         <!-- Card 1 -->
          <a href="../portfolio/card1.html">
         <div class="card">
   
-          <img src="../img/Donna Stroupe.jpg" alt="Coding image" />
+          <img src="../img/IMG_8653.JPG" alt="Coding image" />
           <div class="card-text">
             <h3>Josho Photography</h3>
-            <p>Wedding</p>
+            <p>Chizoba’s pre wedding shoots</p>
           </div>
           <div class="card-hover-text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam delectus explicabo reiciendis quo recusandae eaque voluptatem nostrum deserunt itaque dolor.</p>
@@ -74,12 +79,12 @@
         </div>
     
         <!-- Card 2 -->
-        <a href="../services/digitalmarketing.html">
+        <a href="../portfolio/card2.html">
         <div class="card">
-          <img src="../img/IMG_8374.JPG" alt="Life Trends 2025" />
+          <img src="../img/IMG_8712.JPG" alt="Life Trends 2025" />
           <div class="card-text">
             <h3>Josho Photography</h3>
-            <p>Engagement </p>
+            <p>Jesus in the city 2022 </p>
           </div>
           <div class="card-hover-text">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur aspernatur sit sint quaerat ad labore, error commodi facere blanditiis minima.</p>
@@ -88,12 +93,12 @@
         </div>
     
         <!-- Card 3 -->
-        <a href="../services/aichatbot.html">
+        <a href="../portfolio/card3.html">
         <div class="card">
-          <img src="../img/IMG_8374.JPG" alt="Net Zero" />
+          <img src="../img/IMG_8713.JPG" alt="Net Zero" />
           <div class="card-text">
             <h3>Josho Photography</h3>
-            <p>Event</p>
+            <p>⁠Promise Family shoot</p>
           </div>
           <div class="card-hover-text">
             <p>
@@ -103,12 +108,12 @@
         </div>
     
         <!-- Card 4 -->
-        <a href="../services/digitalmarketing.html">
+        <a href="../portfolio/card4.html">
         <div class="card">
-          <img src="../img/IMG_8371.JPG" alt="Productivity Growth" />
+          <img src="../img/IMG_8714.JPG" alt="Productivity Growth" />
           <div class="card-text">
             <h3>Josho Photography</h3>
-            <p>Potraits </p>
+            <p>⁠Ojo Tewogbade’s Wedding Anniversary </p>
           </div>
           <div class="card-hover-text">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis veniam quo tenetur molestiae quaerat distinctio quia debitis labore, rerum sit!</p>
@@ -117,12 +122,12 @@
         </div>
          
         <!-- Card 5 -->
-        <a href="../services/digitalmarketing.html">
+        <a href="../portfolio/card5.html">
             <div class="card">
-              <img src="../img/IMG_8369.JPG" alt="Productivity Growth" />
+              <img src="../img/IMG_8711.JPG" alt="Productivity Growth" />
               <div class="card-text">
                 <h3>Josho Photography</h3>
-                <p>Landscape </p>
+                <p>Nicole’s 5th Birthday </p>
               </div>
               <div class="card-hover-text">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem earum molestias deserunt ex asperiores vitae tempore! Sed sapiente in laboriosam!</p>
@@ -131,12 +136,12 @@
             </div>
 
             <!-- Card 6 -->
-        <a href="../services/digitalmarketing.html">
+        <a href="../portfolio/card6.html">
             <div class="card">
               <img src="../img/IMG_8371.JPG" alt="Productivity Growth" />
               <div class="card-text">
                 <h3>Josho Photography</h3>
-                <p>Wildlife</p>
+                <p>Church photography Masterclass</p>
               </div>
               <div class="card-hover-text">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, vel. Inventore magni dolorem minima quos consequuntur tenetur quibusdam obcaecati accusantium?</p>
@@ -158,6 +163,16 @@
         <li><a href="#">Suppliers</a></li>
       </ul>
     </footer>
+
+
+    <script>
+      document.getElementById("start-button").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        document.getElementById("card-section").scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+
+
   </body>
 </html>
 
@@ -177,140 +192,3 @@
 </script>
 
 
-
-
-
-
-
-/* Sections */
-section {
-  position: relative;
-  height: 100vh;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-transform: uppercase;
-}
-
-.section-inner {
-  position: absolute;
-  bottom: 200px;
-  left: 150px;
-  max-width: 560px;
-}
-
-.section-inner h4 {
-  font-size: 22px;
-  margin-bottom: 5px;
-  font-weight: 300;
-  color: #ffffff;
-  animation: fadeInUp 0.5s ease-in-out;
-}
-
-.section-inner h2 {
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #ffffff;
-  animation: fadeInUp 0.5s ease-in-out 0.2s;
-  animation-fill-mode: both; 
-}
-
-.section-inner a {
-  animation: fadeInUp 0.5s ease-in-out 0.4s;
-  animation-fill-mode: both; 
-}
-
-/* Background images */
-
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.section-animate {
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-
-  .section-a{
-    margin-bottom: 80px; /* Adjust the value as needed */
-  }
-
-
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-
-
-
-  .section-inner {
-    position: absolute;
-    bottom: 200px;
-    left: 150px;
-    max-width: 560px;
-  }
-  
-  .section-inner h4 {
-    font-size: 22px;
-    margin-bottom: 5px;
-    font-weight: 300;
-    color: #ffffff;
-    animation: fadeInUp 0.5s ease-in-out;
-  }
-  
-  .section-inner h2 {
-    font-size: 50px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #ffffff;
-    animation: fadeInUp 0.5s ease-in-out 0.2s;
-    animation-fill-mode: both; 
-  }
-  
-  .section-inner a {
-    animation: fadeInUp 0.5s ease-in-out 0.4s;
-    animation-fill-mode: both; 
-  }
-
-  
-.section-inner-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    text-align: center;
-    width: 80%;
-  }
-  
-  .section-inner-center h3 {
-    font-size: 80px;
-    margin-bottom: 15px;
-    animation: fadeInUp 0.5s ease-in-out;
-    color: rgb(58, 26, 141);
-  }
-  
-  .section-inner-center p {
-    font-size: 20px;
-    animation: fadeInUp 0.5s ease-in-out 0.2s;
-    animation-fill-mode: both;
-    color: rgb(252, 251, 255);
-  }
-  
-
-
-
-  
