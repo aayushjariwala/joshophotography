@@ -110,7 +110,7 @@ ul {
 
 .logo img {
   display: block;
-  width: 40%;
+  width: 90%;
   height: auto;
 }
 
@@ -193,7 +193,7 @@ section {
 
 .section-inner h2 {
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 1500;
   margin-bottom: 20px;
   color: #ffffff;
   animation: fadeInUp 0.5s ease-in-out 0.2s;

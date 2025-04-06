@@ -32,7 +32,7 @@
     <header class="main-header">
       <div class="logo">
         <a href="index.html">
-          <img src="img/Donna Stroupe.png" alt="SpaceX" />
+          <img src="img/JP1.png" alt="img" />
         </a>
       </div>
       <nav class="desktop-main-menu">
@@ -83,13 +83,12 @@
     <footer>
       <ul>
         <li>Joshophotography &copy; 2022</li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">YouTube</a></li>
+        
+        <li><a href="#">Tik Tok</a></li>
         <li><a href="#">Instagram</a></li>
-        <li><a href="#">Flickr</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Suppliers</a></li>
+        <li><a href="#">YouTube</a></li>
+       
+        
       </ul>
     </footer>
   </body>
@@ -97,22 +96,27 @@
   <script>
     // List of background images
     const images = [
-      "./img/JOSH0036.jpg",
-      "./img/IMG_8370.JPG",
-      "./img/IMG_8371.JPG",
-      "./img/IMG_8372.JPG"
+      "./img/JOSH1763.jpg",
+      "./img/JOSH9553.jpg",
+    
+      "./img/_MG_6204.jpg"
     ];
   
-    let currentIndex = 0; // Track current image index
-    const imageElement = document.getElementById("background-image");
+let currentIndex = 0; 
+const imageElement = document.getElementById("background-image");
+
+function changeBackgroundImage() {
+  imageElement.classList.add("fade-out"); // Start fade-out effect
   
-    function changeBackgroundImage() {
-      currentIndex = (currentIndex + 1) % images.length; // Loop through images
-      imageElement.src = images[currentIndex]; // Change image
-    }
-  
-    // Change image every 5 seconds (5000ms)
-    setInterval(changeBackgroundImage, 5000);
+  setTimeout(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    imageElement.src = images[currentIndex]; // Change image
+    imageElement.classList.remove("fade-out"); // Remove fade-out effect
+  }, 1000); // Change after 1s (same as CSS transition time)
+}
+
+// Change image every 5 seconds
+setInterval(changeBackgroundImage, 5000);
   </script>
   
 </html>
