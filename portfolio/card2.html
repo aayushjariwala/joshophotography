@@ -4,71 +4,126 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../portfolio/card1style.css" />
-    <title>JoshoPhotography</title>
+    <link rel="stylesheet" href="./card1style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Services</title>
   </head>
   <body>
-
-    <!-- header -->
+   
     <header class="main-header">
-        <div class="logo">
-          <a href="index.html">
-            <img src="../img/Donna Stroupe.png" alt="SpaceX" />
-          </a>
-        </div>
-        <nav class="desktop-main-menu">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../services.html">Services</a></li>
-            <li><a href="../contactus.html">Book us</a></li>
-            <li><a href="..portfolio/portfolio.html">Portfolio</a></li>
-         
-          
-          </ul>
-        </nav>
-      </header>
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../img/JP1.png" alt="img" />
+        </a>
+      </div>
+    
+      <!-- Desktop Navigation -->
+      <nav class="desktop-main-menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../book.html">Book us</a></li>
+          <li><a href="../port.html">Portfolio</a></li>
+        </ul>
+      </nav>
+    
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="hamburger">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    
+      <!-- Mobile Navigation (Hidden by Default) -->
+      <nav id="mobile-menu" class="mobile-main-menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../contactus.html">Book us</a></li>
+          <li><a href="../port.html">Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hamburger Menu -->
+    <!-- <button id="menu-btn" class="hamburger" type="button">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button> -->
+
+
+  <!-- SectionA -->
+   
+  <main class="portfolio-gallery">
+    <h1 class="gallery-title">Jesus in the city</h1>
+    <div class="gallery-grid">
+      <img src="./card2/IMG_9028.JPG" alt="Gallery Image 1" />
+      <img src="./card2/IMG_9029.JPG" alt="Gallery Image 2" />
+      <img src="./card2/IMG_9031.JPG" alt="Gallery Image 3" />
+      <img src="./card2/IMG_9032.JPG" alt="Gallery Image 4" />
+      <img src="./card2/IMG_9033.JPG" alt="Gallery Image 5" />
+      <img src="./card2/IMG_9034.JPG" alt="Gallery Image 6" />
+      <img src="./card2/IMG_9035.JPG" alt="Gallery Image 1" />
+      <img src="./card2/IMG_9036.JPG" alt="Gallery Image 2" />
+      <img src="./card2/IMG_9037.JPG" alt="Gallery Image 3" />
+      <img src="./card2/IMG_9038.JPG" alt="Gallery Image 4" />
+      <img src="./card2/IMG_9039.JPG" alt="Gallery Image 5" />
+      <img src="./card2/IMG_9040.JPG" alt="Gallery Image 6" />
+      
+
+      <!-- Add more images as needed -->
+    </div>
+  </main>
+  
+    
+        
+
+<!-- section B -->
+
+
+
+
+      
+
+
+
+
+    
   
 
+    <footer>
+      <ul>
+        <li>Joshophotography &copy; 2022</li>
+        
+        <li><a href="#">Tik Tok</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+       
+        
+      </ul>
+    </footer>
+
+
+    <script>
 
 
 
-    <!-- body -->
-    <div class="top">
-        <div class="responsive-container-block bigContainer">
-          <div class="responsive-container-block Container">
-            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-              <img class="bigImg" src="../img/IMG_8374.JPG">
-            </div>
-            <div class="responsive-container-block sideImgContainer">
-              <div class="responsive-cell-block wk-desk-12 wk-ipadp-12 wk-tab-12 wk-mobile-12 side">
-                <img class="sideImg" src="../img/IMG_8371.JPG">
-              </div>
-              <div class="responsive-cell-block wk-desk-12 wk-ipadp-12 wk-tab-12 wk-mobile-12 side">
-                <img class="sideImg" src="../img/IMG_8369.JPG">
-              </div>
-            </div>
-          </div>
+  // Mobile Menu Toggle
+  const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
 
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+  });
+}
 
-
-          <div class="responsive-container-block Container">
-            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-              <img class="bigImg" src="../img/IMG_8371.JPG">
-            </div>
-            <div class="responsive-container-block sideImgContainer">
-              <div class="responsive-cell-block wk-desk-12 wk-ipadp-12 wk-tab-12 wk-mobile-12 side">
-                <img class="sideImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp22.svg">
-              </div>
-              <div class="responsive-cell-block wk-desk-12 wk-ipadp-12 wk-tab-12 wk-mobile-12 side">
-                <img class="sideImg" src="../img/IMG_8374.JPG">
-              </div>
-              
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-
-  </body>      
+      document.getElementById("start-button").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        document.getElementById("card-section").scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
 </html>

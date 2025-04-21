@@ -240,55 +240,6 @@ footer ul li a:hover {
   color: #aaa;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  position: fixed;
-  top: 40px;
-  right: 20px;
-  z-index: 10;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  background: none;
-  border: none;
-}
-
-.hamburger-top,
-.hamburger-middle,
-.hamburger-bottom {
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  top: 0;
-  left: 0;
-  background: #fff;
-  transition: all 0.5s;
-}
-
-.hamburger-middle {
-  transform: translateY(5px);
-}
-
-.hamburger-bottom {
-  transform: translateY(10px);
-}
-
-/* Transition hamburger to X when open */
-.open {
-  transform: rotate(90deg);
-}
-
-.open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translateX(6px);
-}
-
-.open .hamburger-middle {
-  display: none;
-}
-
-.open .hamburger-bottom {
-  transform: rotate(-45deg) translateY(6px) translateX(-6px);
-}
 
 /* Overlay */
 .overlay-show {
@@ -306,59 +257,8 @@ footer ul li a:hover {
   overflow: hidden;
 }
 
-/* Hide mobile main menu items */
-.mobile-only {
-  display: none;
-}
 
-/* Mobile menu */
-.mobile-main-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 350px;
-  height: 100%;
-  background: #000;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(100%);
-  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-}
 
-/* Bring menu from right */
-.show-menu {
-  transform: translateX(0);
-}
-
-.mobile-main-menu ul {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
-  padding: 50px;
-  width: 100%;
-}
-
-.mobile-main-menu ul li {
-  margin-bottom: 20px;
-  font-size: 18px;
-  text-transform: uppercase;
-  border-bottom: 1px #555 dotted;
-  width: 100%;
-  text-align: right;
-  padding-bottom: 8px;
-}
-
-.mobile-main-menu ul li a {
-  color: #fff;
-  transition: color 0.6s;
-}
-
-.mobile-main-menu ul li a:hover {
-  color: #aaa;
-}
 
 /* Inner Pages */
 .bg-falcon-9 {
@@ -467,92 +367,6 @@ footer ul li a:hover {
 
 /* Media Queries */
 
-@media (max-width: 960px) {
-  /* Hide desktop menu */
-  .desktop-main-menu {
-    display: none;
-  }
-
-  /* Show main mobile items */
-  .mobile-only {
-    display: block;
-  }
-
-  .section-inner-center h3 {
-    font-size: 75px;
-  }
-}
-
-@media (max-width: 600px) {
-  .section-inner {
-    bottom: 75px;
-    left: 20px;
-  }
-
-  .section-inner h2 {
-    font-size: 40px;
-  }
-
-  footer ul li:first-child {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  footer ul li {
-    margin-right: 15px;
-  }
-
-  .logo {
-    width: 150px;
-    margin: auto;
-  }
-
-  .section-inner-center h3 {
-    font-size: 50px;
-  }
-
-  /* Stats */
-  .stats {
-    flex-direction: column;
-  }
-
-  .stats div {
-    margin-bottom: 20px;
-  }
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  /* For tablets */
-  .card {
-    width: 45%; /* Display 2 cards per row */
-    height: 350px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* For phones */
-  .card {
-    width: 90%; /* Display 1 card per row */
-    height: 300px;
-  }
-
-  .card-text h3 {
-    font-size: 0.8em;
-  }
-
-  .card-text p {
-    font-size: 1em;
-  }
-
-  .card-hover-text {
-    font-size: 0.9em;
-    padding: 10px;
-  }
-}
 
 /* Card Container */
 .card-container {
@@ -962,25 +776,6 @@ footer ul li a:hover {
   
 }
 
-@media (max-width: 991px)
-{
-  .contact{
-    padding: 50px;
-  }
-  .container{
-    flex-direction: column;
-
-  }
-  .container .containerinfo{
-    margin-bottom: 40px;
-   
-  }
-  .container .containerinfo,
-  .contact-form{
-    width: 100%;
-   
-  }
-}
 
 
 /* Button */
@@ -1187,38 +982,223 @@ body {
 }
 
 
+/*  hamburger */
+/* Fade Effect for Background Image */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
-@media only screen and (max-width: 979px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-    flex-basis: calc(50% - 30px);
+/* Mobile Menu */
+.mobile-main-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 60%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-main-menu.active {
+  right: 0;
+}
+
+/* Hamburger Button */
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.hamburger.active .hamburger-top {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-middle {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-bottom {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hide hamburger menu on desktop */
+@media (min-width: 768px) {
+  .hamburger {
+    
+    display: none;
   }
-  .ag-courses-item_title {
-    font-size: 24px;
+}
+/* Hide desktop menu on mobile */
+@media (max-width: 767px) {
+  .desktop-main-menu {
+    display: none;
+  }
+
+  /* Show mobile menu (hamburger) */
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 6px 0;
+    transition: 0.3s;
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .ag-format-container {
-    width: 96%;
-  }
 
+
+/* ============================
+   Global Reset for Mobile
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@media only screen and (max-width: 639px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .ag-courses-item_title {
-    min-height: 72px;
-    line-height: 1;
 
-    font-size: 24px;
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* ============================
+   Mobile View Styles (Max: 767px)
+============================ */
+@media (max-width: 767px) {
+
+  /* Home page *******************************/
+
+  .logo img {
+    display: block;
+    width: 70%;
+    height: auto;
   }
-  .ag-courses-item_link {
-    padding: 22px 40px;
+
+
+  .section-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Ensures text stays centered */
+    max-width: 560px;
+    width: 90%; /* Adjust width for better mobile responsiveness */
   }
-  .ag-courses-item_date-box {
-    font-size: 16px;
+  
+  section {
+    position: relative;
+    background-image: url(../img/_MG_8580.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
   }
+
+
+
+  /* services ********************************************/
+  .section-inner-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .section-inner-center h3 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    animation: fadeInUp 0.5s ease-in-out;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+
+
+  .services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .services h1 {
+    color: #ffffff;
+    font-size: 5rem;
+    background: linear-gradient(8deg, rgba(8,52,83,1) 0%, rgba(0,230,173,1) 41%, rgba(41,17,45,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .services h1:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8px;
+    width: 80%;
+    border-radius: 8px;
+    background: #2a2b2b;
+  }
+
+  .ag-courses_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+  }
+  
+  .ag-courses_item {
+    width: 90%; /* Same width for all cards */
+    max-width: 350px; /* Prevent extra-wide cards */
+    height: 150px; /* Fixed height for all cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  
+  
 }

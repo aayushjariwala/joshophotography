@@ -9,135 +9,81 @@
     <title>JoshoPhotography</title>
   </head>
   <body>
-    <!-- <div id="overlay"></div>
-    <div id="mobile-menu" class="mobile-main-menu">
-      <ul>
-        <li><a href="#">Benifits to business</a></li>
-        <li><a href="#">Launches</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Updates</a></li>
-        <li><a href="#">Shop</a></li>
-
-        <li class="mobile-only"><a href="falcon9.html">Falcon 9</a></li>
-        <li class="mobile-only">
-          <a href="falcon-heavy.html">Falcon Heavy</a>
-        </li>
-        <li class="mobile-only"><a href="dragon.html">Dragon</a></li>
-        <li class="mobile-only"><a href="#">Starship</a></li>
-        <li class="mobile-only"><a href="#">Human Spaceflight</a></li>
-        <li class="mobile-only"><a href="#">Rideshare</a></li>
-        <li class="mobile-only"><a href="#">Starlink</a></li>
-      </ul>
-    </div> -->
+  
     <header class="main-header">
       <div class="logo">
         <a href="index.html">
           <img src="img/JP1.png" alt="img" />
         </a>
       </div>
+    
+      <!-- Desktop Navigation -->
       <nav class="desktop-main-menu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="contactus.html">Book us</a></li>
-          <li><a href="portfolio/portfolio.html">Portfolio</a></li>
-       
-        
+          <li><a href="book.html">Book us</a></li>
+          <li><a href="port.html">Portfolio</a></li>
+        </ul>
+      </nav>
+    
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="hamburger">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    
+      <!-- Mobile Navigation (Hidden by Default) -->
+      <nav id="mobile-menu" class="mobile-main-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="book.html">Book us</a></li>
+          <li><a href="port.html">Portfolio</a></li>
         </ul>
       </nav>
     </header>
 
-
-   
-    <!-- <button id="menu-btn" class="hamburger" type="button">
-      <span class="hamburger-top"></span>
-      <span class="hamburger-middle"></span>
-      <span class="hamburger-bottom"></span>
-    </button>  -->
-
     <!-- Section A -->
     <section class="section-a">
-      <img id="background-image" src="./img/IMG_8369.JPG" alt="Background Image" class="background-video" />
+      <img id="background-image" src="./img/JOSH9553.jpg" alt="Background Image" class="background-video" />
 
       <div class="section-inner">
-
-
-        
-
         <h4>Welcome to</h4>
         <h2>Joshua Photography</h2>
-        <a href="./contactus.html" >
+        <a href="./book.html">
           <button class="button-27" role="button">Start</button>
-       
         </a>
       </div>
     </section>
 
-    <!-- Section B -->
-
-
-
-    
-
-   
     <footer>
       <ul>
         <li>Joshophotography &copy; 2022</li>
-        
         <li><a href="#">Tik Tok</a></li>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">YouTube</a></li>
-       
-        
       </ul>
     </footer>
-  </body>
 
-  <script>
-    // List of background images
-    const images = [
-      "./img/JOSH1763.jpg",
-      "./img/JOSH9553.jpg",
-    
-      "./img/_MG_6204.jpg"
-    ];
-  
-let currentIndex = 0; 
-const imageElement = document.getElementById("background-image");
+    <script>
+     // Mobile Menu Toggle
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
 
-function changeBackgroundImage() {
-  imageElement.classList.add("fade-out"); // Start fade-out effect
-  
-  setTimeout(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    imageElement.src = images[currentIndex]; // Change image
-    imageElement.classList.remove("fade-out"); // Remove fade-out effect
-  }, 1000); // Change after 1s (same as CSS transition time)
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+  });
 }
 
-// Change image every 5 seconds
-setInterval(changeBackgroundImage, 5000);
-  </script>
-  
+
+
+
+
+    </script>
+
+  </body>
 </html>
-
-
-<script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '6765174512d7a8cb30f17f3a' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
-
-
-
-
-
-
