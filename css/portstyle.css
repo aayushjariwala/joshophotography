@@ -1335,3 +1335,31 @@ body {
   
   
   
+
+
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: #000000;
+}
