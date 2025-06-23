@@ -240,6 +240,10 @@ footer ul li a:hover {
   color: #aaa;
 }
 
+footer p a{
+  color: #000;
+}
+
 
 /* Overlay */
 .overlay-show {

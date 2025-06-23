@@ -15,6 +15,10 @@
   height: 100vh;
   overflow: hidden;
 }
+footer p a{
+  color: #000;
+}
+
 
 #background-image {
   position: absolute;
