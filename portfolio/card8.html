@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./card1style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Services</title>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/JP1.png" alt="img" />
+            </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-main-menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../Book.html">Book us</a></li>
+                <li><a href="../port.html">Portfolio</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="hamburger">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+        </button>
+
+        <!-- Mobile Navigation (Hidden by Default) -->
+        <nav id="mobile-menu" class="mobile-main-menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../Book.html">Book us</a></li>
+                <li><a href="../port.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hamburger Menu -->
+    <!-- <button id="menu-btn" class="hamburger" type="button">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button> -->
+
+
+    <!-- SectionA -->
+
+    <main class="portfolio-gallery">
+        <h1 class="gallery-title">Wedding Anniversary of RTD. Cons </h1>
+        <div class="gallery-grid">
+            <img src="./card8/_MG_3313.jpg" alt="Gallery Image 1" />
+            <img src="./card8/_MG_3319.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1127.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1129.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1130.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1131.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1132.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1134.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1136.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1138.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1177.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1386.jpg" alt="Gallery Image 1" />
+
+            <img src="./card8/JOSH1181.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1182.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1186.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1188.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1201.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1205.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1215.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1219.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1230.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1230.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1231.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1243.jpg" alt="Gallery Image 1" />
+            <img src="./card8/JOSH1245.jpg" alt="Gallery Image 1" />
+
+              <img src="./card8/JOSH1248.jpg" alt="Gallery Image 1" />
+                <img src="./card8/JOSH1252.jpg" alt="Gallery Image 1" />
+                  <img src="./card8/JOSH1254.jpg" alt="Gallery Image 1" />
+                    <img src="./card8/JOSH1258.jpg" alt="Gallery Image 1" />
+                      <img src="./card8/JOSH1271.jpg" alt="Gallery Image 1" />
+                        <img src="./card8/JOSH1300.jpg" alt="Gallery Image 1" />
+                          <img src="./card8/JOSH1386.jpg" alt="Gallery Image 1" />
+
+
+
+
+
+            <!-- Add more images as needed -->
+        </div>
+    </main>
+
+
+
+
+    <!-- section B -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <ul>
+            <li>Joshophotography &copy; 2022</li>
+
+            <li><a href="#">Tik Tok</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+
+
+        </ul>
+    </footer>
+
+
+    <script>
+
+
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("active");
+                menuBtn.classList.toggle("active");
+            });
+        }
+
+        document.getElementById("start-button").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            document.getElementById("card-section").scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>

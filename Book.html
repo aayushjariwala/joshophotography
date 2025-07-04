@@ -83,7 +83,7 @@
       <div></div>
       <div>
         <p id="contactus">Contact us!</p>
-        <form action="">
+        <form id="contact-form"  action="">
           <p><input type="text" name="name" id="name" placeholder="Name:" /></p>
           <p><input type="text" name="email" id="email" placeholder="Phone:" /></p>
           <p><input type="submit" name="send" id="send" value="Send" /></p>
@@ -124,9 +124,9 @@
     <footer>
       <ul>
         <li>Joshophotography &copy; 2022</li>
-        <li><a href="#">TikTok</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">YouTube</a></li>
+        <li><a href="https://www.tiktok.com/@joshuaphotography222?_t=ZM-8xjhZ8bdSHW&_r=1">TikTok</a></li>
+        <li><a href="https://www.instagram.com/joshuaphotography222?igsh=YzN3NnUzOGNrZWti&utm_source=qr">Instagram</a></li>
+        <li><a href="https://youtube.com/@tamilorejoshua?si=yzxK26jX8DA7Nqh3">YouTube</a></li>
       </ul>
       <p style="text-align: center; font-size: 0.9em; margin-top: 10px;">
   Designed and Developed by <strong><a href="https://www.codewizardstudio.com" target="_blank">CodeWizardStudio</a></strong>
@@ -134,8 +134,23 @@
     </footer>
 
 
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+    <script >
+   emailjs.init("1-8mke8fpEhWH6eAj");
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm('service_s54q4tl', 'template_m2f0swf', this)
+    .then(() => {
+      alert('Message Sent Successfully!');
+      this.reset();
+    }, (error) => {
+      console.log('FAILED...', error);
+      alert('Failed to send message, please try again.');
+    });
+});
 
 
   // Mobile Menu Toggle
@@ -154,5 +169,12 @@ if (menuBtn && mobileMenu) {
         document.getElementById("envelope").scrollIntoView({ behavior: "smooth" });
       });
     </script>
+
+
+    <script>
+   
+
+    </script>
+
   </body>
 </html>
